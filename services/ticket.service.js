@@ -125,7 +125,7 @@ const updateTicketById = async(ticketIdInfo, ticketInfo, currentUser) =>{
 
         console.log(validateTicket.assignedTo != currentUser.email, validateTicket.assignee != currentUser.email)
         if(validateTicket.assignedTo != currentUser.email && validateTicket.assignee != currentUser.email) {
-            if(!currentUser.userType != 'admin' ) {
+            if(currentUser.userType != 'admin' ) {
                 return {
                     error: "Invalid assignedTo user"
                 }
