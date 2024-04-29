@@ -121,9 +121,9 @@ const updateTicketById = async(ticketIdInfo, ticketInfo, currentUser) =>{
 
         const filter = { _id: ticketIdInfo.id };
         const update = ticketInfo;
-        console.log(currentUser, update, validateTicket);
+        // console.log(currentUser, update, validateTicket);
 
-        console.log(validateTicket.assignedTo != currentUser.email, validateTicket.assignee != currentUser.email)
+        // console.log(validateTicket.assignedTo != currentUser.email, validateTicket.assignee != currentUser.email)
         if(validateTicket.assignedTo != currentUser.email && validateTicket.assignee != currentUser.email) {
             if(currentUser.userType != 'admin' ) {
                 return {
